@@ -86,6 +86,7 @@ export default class {
   }
 
   handleEditTicket(e, bill, bills) {
+    //Bugfix --- possibilité de voir les autres tickets
     this.counter = this.id === bill.id ? this.counter + 1 : 0;
     if (this.id === undefined || this.id !== bill.id) this.id = bill.id
     if (this.counter % 2 === 0) {

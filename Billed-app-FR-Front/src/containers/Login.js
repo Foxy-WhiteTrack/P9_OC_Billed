@@ -19,7 +19,7 @@ export default class Login {
     e.preventDefault()
     const user = {
       type: "Employee",
-      // permettre à l'admin de se connecter avec ses identifiants
+      //Bugfix --- permettre à l'admin de se connecter avec ses identifiants
       email: e.target.querySelector(`input[data-testid="employee-email-input"]`).value,
       password: e.target.querySelector(`input[data-testid="employee-password-input"]`).value,
       status: "connected"
