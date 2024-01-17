@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">58.54% </span>
+                <span class="strong">73.17% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>24/41</span>
+                <span class='fraction'>30/41</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">36.36% </span>
+                <span class="strong">45.45% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/11</span>
+                <span class='fraction'>5/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">58.54% </span>
+                <span class="strong">73.17% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>24/41</span>
+                <span class='fraction'>30/41</span>
             </div>
         
             
@@ -152,7 +152,10 @@
 <a name='L93'></a><a href='#L93'>93</a>
 <a name='L94'></a><a href='#L94'>94</a>
 <a name='L95'></a><a href='#L95'>95</a>
-<a name='L96'></a><a href='#L96'>96</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,6 +180,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -199,16 +203,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -231,6 +235,8 @@
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -268,6 +274,7 @@ export default class Login {
     e.preventDefault()
     const user = {
       type: "Employee",
+      //Bugfix --- permettre à l'admin de se connecter avec ses identifiants
       email: e.target.querySelector(`input[data-testid="employee-email-input"]`).value,
       password: e.target.querySelector(`input[data-testid="employee-password-input"]`).value,
       status: "connected"
@@ -281,7 +288,7 @@ export default class Login {
         this.onNavigate(ROUTES_PATH['Bills'])
         this.PREVIOUS_LOCATION = ROUTES_PATH['Bills']
         PREVIOUS_LOCATION = this.PREVIOUS_LOCATION
-        this.document.body.style.backgroundColor="#fff"
+        this.document.body.style.backgroundColor = "#fff"
       })
 &nbsp;
   }
@@ -290,20 +297,20 @@ export default class Login {
     e.preventDefault()
     const user = {
       type: "Admin",
-      email: e.target.querySelector(`input[data-testid="employee-email-input"]`).value,
-      password: e.target.querySelector(`input[data-testid="employee-password-input"]`).value,
+      email: e.target.querySelector(`input[data-testid="admin-email-input"]`).value,
+      password: e.target.querySelector(`input[data-testid="admin-password-input"]`).value,
       status: "connected"
     }
-<span class="cstat-no" title="statement not covered" >    this.localStorage.setItem("user", JSON.stringify(user))</span>
-<span class="cstat-no" title="statement not covered" >    this.login(user)</span>
+    this.localStorage.setItem("user", JSON.stringify(user))
+    this.login(user)
       .catch(
 <span class="fstat-no" title="function not covered" >        (e</span>rr) =&gt; <span class="cstat-no" title="statement not covered" >this.createUser(user)</span>
       )
-      .then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >        this.onNavigate(ROUTES_PATH['Dashboard'])</span>
-<span class="cstat-no" title="statement not covered" >        this.PREVIOUS_LOCATION = ROUTES_PATH['Dashboard']</span>
-<span class="cstat-no" title="statement not covered" >        PREVIOUS_LOCATION = this.PREVIOUS_LOCATION</span>
-<span class="cstat-no" title="statement not covered" >        document.body.style.backgroundColor="#fff"</span>
+      .then(() =&gt; {
+        this.onNavigate(ROUTES_PATH['Dashboard'])
+        this.PREVIOUS_LOCATION = ROUTES_PATH['Dashboard']
+        PREVIOUS_LOCATION = this.PREVIOUS_LOCATION
+        document.body.style.backgroundColor = "#fff"
       })
   }
 &nbsp;
@@ -311,12 +318,12 @@ export default class Login {
   login = <span class="fstat-no" title="function not covered" >(u</span>ser) =&gt; {
 <span class="cstat-no" title="statement not covered" >    if (this.store) {</span>
 <span class="cstat-no" title="statement not covered" >      return this.store</span>
-      .login(JSON.stringify({
-        email: user.email,
-        password: user.password,
-      })).then(<span class="fstat-no" title="function not covered" >({</span>jwt}) =&gt; {
-<span class="cstat-no" title="statement not covered" >        localStorage.setItem('jwt', jwt)</span>
-      })
+        .login(JSON.stringify({
+          email: user.email,
+          password: user.password,
+        })).then(<span class="fstat-no" title="function not covered" >({</span> jwt }) =&gt; {
+<span class="cstat-no" title="statement not covered" >          localStorage.setItem('jwt', jwt)</span>
+        })
     } else {
 <span class="cstat-no" title="statement not covered" >      return null</span>
     }
@@ -326,17 +333,19 @@ export default class Login {
   createUser = <span class="fstat-no" title="function not covered" >(u</span>ser) =&gt; {
 <span class="cstat-no" title="statement not covered" >    if (this.store) {</span>
 <span class="cstat-no" title="statement not covered" >      return this.store</span>
-      .users()
-      .create({data:JSON.stringify({
-        type: user.type,
-        name: user.email.split('@')[0],
-        email: user.email,
-        password: user.password,
-      })})
-      .then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >        console.log(`User with ${user.email} is created`)</span>
-<span class="cstat-no" title="statement not covered" >        return this.login(user)</span>
-      })
+        .users()
+        .create({
+          data: JSON.stringify({
+            type: user.type,
+            name: user.email.split('@')[0],
+            email: user.email,
+            password: user.password,
+          })
+        })
+        .then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >          console.log(`User with ${user.email} is created`)</span>
+<span class="cstat-no" title="statement not covered" >          return this.login(user)</span>
+        })
     } else {
 <span class="cstat-no" title="statement not covered" >      return null</span>
     }
@@ -349,7 +358,7 @@ export default class Login {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Jan 11 2024 18:20:54 GMT+0100 (heure normale d’Europe centrale)
+                at Wed Jan 17 2024 02:05:02 GMT+0100 (heure normale d’Europe centrale)
             </div>
         </div>
         <script src="../prettify.js"></script>

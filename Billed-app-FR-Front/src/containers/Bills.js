@@ -54,6 +54,8 @@ export default class Bills {
               }
             })
           console.log('length', bills.length)
+          // Tri des notes de frais en ordre décroissant
+          bills.sort((a, b) => (new Date(b.date) - new Date(a.date)))
           return bills
         })
     }
