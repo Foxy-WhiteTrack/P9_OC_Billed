@@ -12,7 +12,7 @@
     _ npm install -g live-server
     _ live-server
     _ npm run test
-    _ npm i -g jest-cli
+    _ npm i jest
 -esLint
 
 

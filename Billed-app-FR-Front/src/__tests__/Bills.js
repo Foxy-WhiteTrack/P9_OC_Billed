@@ -10,6 +10,8 @@ import { localStorageMock } from "../__mocks__/localStorage.js";
 
 import router from "../app/Router.js";
 
+import Bills from "../containers/Bills.js";
+
 describe("Given I am connected as an employee", () => {
   describe("When I am on Bills Page", () => {
     test("Then bill icon in vertical layout should be highlighted", async () => {
@@ -26,7 +28,9 @@ describe("Given I am connected as an employee", () => {
       await waitFor(() => screen.getByTestId('icon-window'))
       const windowIcon = screen.getByTestId('icon-window')
 
+      expect(windowIcon.classList.contains('active-icon')).toBeTruthy()
     })
+
     test("Then bills should be ordered from earliest to latest", () => {
       document.body.innerHTML = BillsUI({ data: bills })
       //Récupère tous les éléments qui contiennent une date

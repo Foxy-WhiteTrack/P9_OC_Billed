@@ -17,14 +17,20 @@ const row = (bill) => {
       </td>
     </tr>
     `)
-  }
-
-const rows = (data) => {
-  return (data && data.length) ? data.map(bill => row(bill)).join("") : ""
 }
 
+// BugFix - Tri des notes de frais en ordre décroissant version 2 (pour l'intégrer dans la vue et non la logique métier)
+const rows = (datas) => {
+  if (datas && datas.length) {
+    datas.sort((a, b) => new Date(b.date) - new Date(a.date));
+    return datas.map((bill) => row(bill)).join("");
+  } else {
+    return "";
+  }
+};
+
 export default ({ data: bills, loading, error }) => {
-  
+
   const modal = () => (`
     <div class="modal fade" id="modaleFile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -47,7 +53,7 @@ export default ({ data: bills, loading, error }) => {
   } else if (error) {
     return ErrorPage(error)
   }
-  
+
   return (`
     <div class='layout'>
       ${VerticalLayout(120)}
