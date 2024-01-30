@@ -27,7 +27,6 @@ export default class NewBill {
     const fileExtension = fileName.split('.').pop().toLowerCase();
     if (!permitedFormat.includes(fileExtension)) {
       alert('Le format du fichier n\'est pas accepté');
-      return;
     }
 
     const formData = new FormData()

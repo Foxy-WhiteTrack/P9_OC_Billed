@@ -48,6 +48,7 @@ describe("Given I am connected as an employee", () => {
     describe("When the user submit a new bill", () => {
 
       // liste tests à faire dans le formulaire en matière de fonctionnalités
+      // TestIntégration --- vérifie comment le composant interagit avec le DOM simulé et le comportement du formulaire complet.
       test("Then the form is POST by user", async () => {
         // première étape : créer l'environnement de test
         const html = NewBillUI();
@@ -80,6 +81,7 @@ describe("Given I am connected as an employee", () => {
         await waitFor(() => screen.getByTestId("btn-new-bill"));
       })
 
+      // TestIntégration --- vérifie que lorsque l'utilisateur télécharge une image au bon format
       describe("When the user send a good image format (jpg, jpeg, png etc...)", () => {
         test("then should not have an error message and the name of image should be displayed", async () => {
           // première étape : créer l'environnement de test
@@ -113,6 +115,7 @@ describe("Given I am connected as an employee", () => {
         });
       });
 
+      // TestIntégration --- vérifie que lorsque l'utilisateur remplit le formulaire et soumet un nouveau bill + update du store
       test("Then call update method on store", () => {
 
         const mockGetElementById = jest.fn()
@@ -183,6 +186,9 @@ describe("Given I am connected as an employee", () => {
                 case 'textarea[data-testid="commentary"]':
                   return { value: 'Commentaire utilisateur' }
                   break;
+                case 'input[data-testid="file"]':
+                  return { files: [{ name: "catMoew.jpg", type: "image/jpeg" }] }
+                  break;
               }
             }
           }
@@ -198,8 +204,6 @@ describe("Given I am connected as an employee", () => {
           vat: 'tva',
           pct: 42,
           commentary: 'Commentaire utilisateur',
-          fileUrl: null,
-          fileName: null,
           status: 'pending'
         }
         // Analyse des données passées à la fonction 
@@ -208,6 +212,7 @@ describe("Given I am connected as an employee", () => {
 
         expect(data).toMatchObject(dataToCheck)
       })
+      // TestIntégration --- vérifie comment l'application gère les erreurs lors de la création d'un nouveau bill
       // Quand il y a une erreur
       describe("When an error occurs", () => {
         test("should fail with 500 message error", async () => {
@@ -231,7 +236,7 @@ describe("Given I am connected as an employee", () => {
           });
           const html = BillsUI({ error: "Erreur 500" });
           document.body.innerHTML = html;
-          const message = await screen.getByText(/Erreur 500/);
+          const message = screen.getByText(/Erreur 500/);
           expect(message).toBeTruthy();
         });
       });
@@ -241,4 +246,3 @@ describe("Given I am connected as an employee", () => {
 
 
 });
-

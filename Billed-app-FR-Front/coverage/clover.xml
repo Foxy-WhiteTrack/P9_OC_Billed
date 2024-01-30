@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1706152941108" clover="3.2.0">
-  <project timestamp="1706152941108" name="All files">
-    <metrics statements="231" coveredstatements="188" conditionals="92" coveredconditionals="72" methods="69" coveredmethods="50" elements="392" coveredelements="310" complexity="0" loc="231" ncloc="231" packages="3" files="16" classes="16"/>
+<coverage generated="1706636448897" clover="3.2.0">
+  <project timestamp="1706636448897" name="All files">
+    <metrics statements="230" coveredstatements="206" conditionals="92" coveredconditionals="74" methods="69" coveredmethods="56" elements="391" coveredelements="336" complexity="0" loc="230" ncloc="230" packages="3" files="16" classes="16"/>
     <package name="constants">
       <metrics statements="8" coveredstatements="8" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
       <file name="routes.js" path="F:\Openclassrooms DevApp_JS_REACT\P9\Billed\P9_OC_Billed\Billed-app-FR-Front\src\constants\routes.js">
         <metrics statements="8" coveredstatements="8" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
         <line num="6" count="6" type="stmt"/>
         <line num="13" count="6" type="stmt"/>
-        <line num="14" count="28" type="cond" truecount="5" falsecount="0"/>
+        <line num="14" count="27" type="cond" truecount="5" falsecount="0"/>
         <line num="16" count="7" type="stmt"/>
-        <line num="18" count="7" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
         <line num="22" count="12" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
@@ -20,35 +20,35 @@
       </file>
     </package>
     <package name="containers">
-      <metrics statements="192" coveredstatements="149" conditionals="57" coveredconditionals="37" methods="53" coveredmethods="34"/>
+      <metrics statements="191" coveredstatements="167" conditionals="57" coveredconditionals="39" methods="53" coveredmethods="40"/>
       <file name="Bills.js" path="F:\Openclassrooms DevApp_JS_REACT\P9\Billed\P9_OC_Billed\Billed-app-FR-Front\src\containers\Bills.js">
-        <metrics statements="26" coveredstatements="13" conditionals="6" coveredconditionals="3" methods="8" coveredmethods="2"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
+        <metrics statements="26" coveredstatements="23" conditionals="6" coveredconditionals="5" methods="8" coveredmethods="7"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="25" count="9" type="stmt"/>
+        <line num="26" count="9" type="stmt"/>
+        <line num="27" count="9" type="stmt"/>
+        <line num="28" count="9" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
         <line num="32" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="33" count="1" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="40" count="4" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
       </file>
       <file name="Dashboard.js" path="F:\Openclassrooms DevApp_JS_REACT\P9\Billed\P9_OC_Billed\Billed-app-FR-Front\src\containers\Dashboard.js">
         <metrics statements="74" coveredstatements="65" conditionals="41" coveredconditionals="30" methods="24" coveredmethods="19"/>
@@ -173,16 +173,16 @@
       </file>
       <file name="Logout.js" path="F:\Openclassrooms DevApp_JS_REACT\P9\Billed\P9_OC_Billed\Billed-app-FR-Front\src\containers\Logout.js">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="5" count="19" type="stmt"/>
-        <line num="6" count="19" type="stmt"/>
-        <line num="7" count="19" type="stmt"/>
-        <line num="8" count="19" type="stmt"/>
-        <line num="11" count="19" type="stmt"/>
+        <line num="5" count="22" type="stmt"/>
+        <line num="6" count="22" type="stmt"/>
+        <line num="7" count="22" type="stmt"/>
+        <line num="8" count="22" type="stmt"/>
+        <line num="11" count="22" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
       </file>
       <file name="NewBill.js" path="F:\Openclassrooms DevApp_JS_REACT\P9\Billed\P9_OC_Billed\Billed-app-FR-Front\src\containers\NewBill.js">
-        <metrics statements="44" coveredstatements="34" conditionals="6" coveredconditionals="4" methods="8" coveredmethods="6"/>
+        <metrics statements="43" coveredstatements="42" conditionals="6" coveredconditionals="4" methods="8" coveredmethods="7"/>
         <line num="6" count="3" type="stmt"/>
         <line num="7" count="3" type="stmt"/>
         <line num="8" count="3" type="stmt"/>
@@ -204,52 +204,51 @@
         <line num="27" count="2" type="stmt"/>
         <line num="28" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="29" count="2" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
         <line num="50" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="3" type="stmt"/>
         <line num="53" count="3" type="stmt"/>
         <line num="54" count="3" type="stmt"/>
         <line num="55" count="3" type="stmt"/>
         <line num="56" count="3" type="stmt"/>
-        <line num="57" count="3" type="stmt"/>
+        <line num="69" count="3" type="stmt"/>
         <line num="70" count="3" type="stmt"/>
-        <line num="71" count="3" type="stmt"/>
-        <line num="75" count="3" type="stmt"/>
-        <line num="76" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="77" count="3" type="stmt"/>
-        <line num="81" count="1" type="stmt"/>
-        <line num="83" count="2" type="stmt"/>
+        <line num="74" count="3" type="stmt"/>
+        <line num="75" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="76" count="3" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="82" count="2" type="stmt"/>
       </file>
     </package>
     <package name="views">
       <metrics statements="31" coveredstatements="31" conditionals="30" coveredconditionals="30" methods="15" coveredmethods="15"/>
       <file name="Actions.js" path="F:\Openclassrooms DevApp_JS_REACT\P9\Billed\P9_OC_Billed\Billed-app-FR-Front\src\views\Actions.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="6" type="stmt"/>
+        <line num="5" count="18" type="stmt"/>
       </file>
       <file name="BillsUI.js" path="F:\Openclassrooms DevApp_JS_REACT\P9\Billed\P9_OC_Billed\Billed-app-FR-Front\src\views\BillsUI.js">
         <metrics statements="13" coveredstatements="13" conditionals="8" coveredconditionals="8" methods="6" coveredmethods="6"/>
         <line num="7" count="6" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
+        <line num="8" count="16" type="stmt"/>
         <line num="23" count="6" type="stmt"/>
-        <line num="24" count="6" type="cond" truecount="4" falsecount="0"/>
-        <line num="25" count="6" type="stmt"/>
-        <line num="26" count="4" type="stmt"/>
+        <line num="24" count="9" type="cond" truecount="4" falsecount="0"/>
+        <line num="25" count="18" type="stmt"/>
+        <line num="26" count="16" type="stmt"/>
         <line num="28" count="5" type="stmt"/>
-        <line num="34" count="9" type="stmt"/>
-        <line num="51" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="12" type="stmt"/>
+        <line num="51" count="12" type="cond" truecount="2" falsecount="0"/>
         <line num="52" count="1" type="stmt"/>
-        <line num="53" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="53" count="11" type="cond" truecount="2" falsecount="0"/>
         <line num="54" count="2" type="stmt"/>
-        <line num="57" count="6" type="stmt"/>
+        <line num="57" count="9" type="stmt"/>
       </file>
       <file name="DashboardFormUI.js" path="F:\Openclassrooms DevApp_JS_REACT\P9\Billed\P9_OC_Billed\Billed-app-FR-Front\src\views\DashboardFormUI.js">
         <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
@@ -282,11 +281,11 @@
       </file>
       <file name="VerticalLayout.js" path="F:\Openclassrooms DevApp_JS_REACT\P9\Billed\P9_OC_Billed\Billed-app-FR-Front\src\views\VerticalLayout.js">
         <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
-        <line num="7" count="42" type="stmt"/>
-        <line num="8" count="42" type="cond" truecount="2" falsecount="0"/>
-        <line num="9" count="21" type="stmt"/>
-        <line num="11" count="42" type="cond" truecount="4" falsecount="0"/>
-        <line num="12" count="10" type="stmt"/>
+        <line num="7" count="45" type="stmt"/>
+        <line num="8" count="45" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="24" type="stmt"/>
+        <line num="11" count="45" type="cond" truecount="4" falsecount="0"/>
+        <line num="12" count="13" type="stmt"/>
         <line num="29" count="32" type="stmt"/>
       </file>
     </package>
