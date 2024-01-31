@@ -239,6 +239,30 @@ describe("Given I am connected as an employee", () => {
           const message = screen.getByText(/Erreur 500/);
           expect(message).toBeTruthy();
         });
+        test("should fail with 404 message error", async () => {
+          jest.spyOn(mockStore, "bills");
+          Object.defineProperty(window, "localStorage", {
+            value: localStorageMock,
+          });
+          window.localStorage.setItem(
+            "user",
+            JSON.stringify({
+              type: "Employee",
+              email: "a@a",
+            })
+          );
+          mockStore.bills.mockImplementationOnce(() => {
+            return {
+              create: () => {
+                return Promise.reject(new Error("Erreur 404"));
+              },
+            };
+          });
+          const html = BillsUI({ error: "Erreur 404" });
+          document.body.innerHTML = html;
+          const message = screen.getByText(/Erreur 404/);
+          expect(message).toBeTruthy();
+        });
       });
     });
 
